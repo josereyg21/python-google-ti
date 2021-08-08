@@ -1,0 +1,3 @@
+# python-google-ti
+Week 1 and Week 2 were theory only!
+Practice Quiz 1 for Week 3 is theoric as well...
