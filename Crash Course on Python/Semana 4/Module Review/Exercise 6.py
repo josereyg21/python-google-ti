@@ -6,12 +6,12 @@
 # if a name is included in both dictionaries. Then print the resulting dictionary.
 
 def combine_guests(guests1, guests2):
-    v = {x for x in guests1 if x not in guests2 }
-    u = {guests1[x] for x in v}
+    v = [x for x in guests2 if x not in guests1]
+    u = [guests2[x] for x in v]
     w = (dict(zip(v,u)))
-    guests2.update(guests1)
+    guests1.update(w)
     
-    return guests2
+    return guests1
 
 
 Rorys_guests = { "Adam":2, "Brenda":3, "David":1, "Jose":3, "Charlotte":2, "Terry":1, "Robert":4}
