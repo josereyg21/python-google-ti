@@ -15,3 +15,14 @@ def is_palindrome(input_string):
 print(is_palindrome("Never Odd or Even")) # Should be True
 print(is_palindrome("abc")) # Should be False
 print(is_palindrome("kayak")) # Should be True
+
+def is_palindrome(input_string):
+    x = " "
+    inp, input_string = input_string.lower(), input_string.lower()
+    inp = inp[::-1]
+    inp, input_string = ''.join( i for i in inp if i not in x), ''.join( i for i in input_string if i not in x)
+    return input_string == inp
+
+print(is_palindrome("Never Odd or Even")) # Should be True
+print(is_palindrome("abc")) # Should be False
+print(is_palindrome("kayak")) # Should be True
