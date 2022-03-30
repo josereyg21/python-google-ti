@@ -17,3 +17,19 @@ def groups_per_user(groups):
 print(groups_per_user({"local": ["admin", "userA"],
 		"public":  ["admin", "userB"],
 		"administrator": ["admin"] }))
+
+
+def groups_per_user(groups):
+    lst = []
+    dit = {}
+    for kind,user in groups.items():
+        lst.extend(user)
+    lst = set(lst)   # should be  list(set(lst))
+    lst = list(lst)
+
+    for i in lst:
+        for x in groups:
+            if i in groups[x]:
+                dit[i] = dit.get(i,[]) + [x]
+
+    return dit
