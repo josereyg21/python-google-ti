@@ -18,3 +18,18 @@ Ken is 30 years old and works as Chef
 Pat is 35 years old and works as Lawyer
 Amanda is 25 years old and works as Engineer
 """
+
+def guest_list(guests):
+    for x in guests:
+        name, age, work = x
+        print(f"{name} is {age} years old and works as {work}")
+
+guest_list([('Ken', 30, "Chef"), ("Pat", 35, 'Lawyer'), ('Amanda', 25, "Engineer")])
+
+#Click Run to submit code
+"""
+Output should match:
+Ken is 30 years old and works as Chef
+Pat is 35 years old and works as Lawyer
+Amanda is 25 years old and works as Engineer
+"""
