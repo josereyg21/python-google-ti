@@ -11,3 +11,14 @@ def email_list(domains):
 
 
 print(email_list({"gmail.com": ["clark.kent", "diana.prince", "peter.parker"], "yahoo.com": ["barbara.gordon", "jean.grey"], "hotmail.com": ["bruce.wayne"]}))
+
+def email_list(domains):
+    emails = []
+    for y in domains:
+        for i in range(len(domains[y])):
+            emails.append(domains[y][i]+ "@" + y)
+
+    return emails
+
+
+print(email_list({"gmail.com": ["clark.kent", "diana.prince", "peter.parker"], "yahoo.com": ["barbara.gordon", "jean.grey"], "hotmail.com": ["bruce.wayne"]}))
